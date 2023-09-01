@@ -1,0 +1,57 @@
+# tmap version 4
+
+## Intro {#sec-intro}
+
+Let's start by installing **tmap** version 4:
+
+```{r}
+#| eval: false
+remotes::install_github("r-tmap/tmap@v4")
+```
+
+Then attach some packages...
+
+```{r}
+#| message: false
+library(sf)
+library(terra)
+library(spData)
+library(tmap)
+```
+
+... and create our first map ([@fig-map1])!
+
+```{r}
+#| label: fig-map1
+#| fig-cap: "My first map"
+tm_shape(nz) +
+  tm_borders()
+```
+
+## My second map
+
+As mentioned in @sec-intro, we are going to make some maps!
+
+```{r}
+tm_shape(nz) +
+  tm_polygons(fill = "Median_income", 
+              fill.scale = tm_scale_continuous(values = "viridis"),
+              fill.legend = tm_legend(title = "Median income\n(USD, 2007)")) +
+  tm_graticules() +
+  tm_compass(position = tm_pos_in("left", "top")) +
+  tm_scalebar() +
+  tm_title("Wowwowowwow") +
+  tm_credits("OGH2023")
+```
+
+<!-- jn: Oh, this map is bad. We need to improve the title! -->
+
+```{r}
+#| echo: false
+#| label: tbl-table1
+#| tbl-cap: "Comparision between tmap v3 and v4"
+df = data.frame(Version = c(3, 4), Description = c("Good", "Better"))
+knitr::kable(df)
+```
+
+This will be a reference to @knuth84.

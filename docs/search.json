@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The (second?) quickest book ever",
+    "section": "",
+    "text": "Preface\nThis is a book."
+  },
+  {
+    "objectID": "intro.html#sec-intro",
+    "href": "intro.html#sec-intro",
+    "title": "1  tmap version 4",
+    "section": "1.1 Intro",
+    "text": "1.1 Intro\nLet’s start by installing tmap version 4:\n\nremotes::install_github(\"r-tmap/tmap@v4\")\n\nThen attach some packages…\n\nlibrary(sf)\nlibrary(terra)\nlibrary(spData)\nlibrary(tmap)\n\n… and create our first map (Figure 1.1)!\n\ntm_shape(nz) +\n  tm_borders()\n\n\n\n\nFigure 1.1: My first map"
+  },
+  {
+    "objectID": "intro.html#my-second-map",
+    "href": "intro.html#my-second-map",
+    "title": "1  tmap version 4",
+    "section": "1.2 My second map",
+    "text": "1.2 My second map\nAs mentioned in Section 1.1, we are going to make some maps!\n\ntm_shape(nz) +\n  tm_polygons(fill = \"Median_income\", \n              fill.scale = tm_scale_continuous(values = \"viridis\"),\n              fill.legend = tm_legend(title = \"Median income\\n(USD, 2007)\")) +\n  tm_graticules() +\n  tm_compass(position = tm_pos_in(\"left\", \"top\")) +\n  tm_scalebar() +\n  tm_title(\"Wowwowowwow\") +\n  tm_credits(\"OGH2023\")\n\n\n\n\n\n\n\n\n\nTable 1.1: Comparision between tmap v3 and v4\n\n\nVersion\nDescription\n\n\n\n\n3\nGood\n\n\n4\nBetter\n\n\n\n\n\n\nThis will be a reference to Knuth (1984).\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]
